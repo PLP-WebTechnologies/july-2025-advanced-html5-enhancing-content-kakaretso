@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enhanced-form.html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 2em;
+        }
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.3em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        th, td {
+            padding: 0.6em;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 0.5em;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.3em;
+        }
+        button {
+            padding: 0.7em 1.2em;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML5 Lists, Tables, Media & Accessible Form</h1>
+</header>
+
+<main>
+
+    <!-- Lists Section -->
+    <section>
+        <h2>Web Development Skills</h2>
+        <p>These lists demonstrate different ways to organize information meaningfully:</p>
+
+        <h3>Ordered List (Ranking Skills)</h3>
+        <ol>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ol>
+
+        <h3>Unordered List (Soft Skills)</h3>
+        <ul>
+            <li>Problem Solving</li>
+            <li>Database Management</li>
+            <li>Responsive Design</li>
+        </ul>
+
+        <h3>Definition List (Key Terms)</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Structure of a webpage.</dd>
+            <dt>CSS</dt>
+            <dd>Styling and layout for web content.</dd>
+            <dt>JavaScript</dt>
+            <dd>Adding interactivity and functionality.</dd>
+        </dl>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>Weekly Training Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Topic</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>HTML & CSS</td>
+                    <td>09:00 - 11:00</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>JavaScript</td>
+                    <td>10:00 - 12:00</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Python Basics</td>
+                    <td>14:00 - 16:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>Learning Resources</h2>
+        <figure>
+            <img src="https://via.placeholder.com/600x300" alt="Coding workspace with a laptop and coffee" width="100%">
+            <figcaption>A placeholder image representing coding creativity and focus</figcaption>
+        </figure>
+        <p>Listen to an inspirational track while coding:</p>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- Accessible Form Section -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3" autocomplete="name">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" value="South Africa" readonly>
+            </fieldset>
+
+            <!-- Account Details -->
+            <fieldset>
+                <legend>Account Details</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" pattern="[A-Za-z0-9]{5,}" 
+                       title="At least 5 characters, letters and numbers only" required autocomplete="username">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="********" minlength="6" required autocomplete="new-password">
+
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="********" minlength="6" required autocomplete="new-password">
+            </fieldset>
+
+            <!-- Preferences -->
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="language">Preferred Language:</label>
+                <select id="language" name="language" required>
+                    <option value="">--Select--</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="sql">SQL</option>
+                </select>
+
+                <label>Subscription Plan:</label>
+                <input type="radio" id="basic" name="plan" value="basic" required>
+                <label for="basic">Basic</label>
+                <input type="radio" id="premium" name="plan" value="premium">
+                <label for="premium">Premium</label>
+
+                <label>
+                    <input type="checkbox" name="newsletter"> Subscribe to Newsletter
+                </label>
+            </fieldset>
+
+            <!-- Additional Comments -->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="comments">Your Message:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Write your message here..."></textarea>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 HTML5 Demo Page | Designed for clarity and accessibility</p>
+</footer>
+
+</body>
+</html>
