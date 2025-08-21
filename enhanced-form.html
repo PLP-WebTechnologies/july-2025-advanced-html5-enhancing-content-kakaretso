@@ -100,11 +100,11 @@
         <h3>Definition List (Key Terms)</h3>
         <dl>
             <dt>HTML</dt>
-            <dd>Structure of a webpage.</dd>
+                <dd>Structure of a webpage.</dd>
             <dt>CSS</dt>
-            <dd>Styling and layout for web content.</dd>
+                <dd>Styling and layout for web content.</dd>
             <dt>JavaScript</dt>
-            <dd>Adding interactivity and functionality.</dd>
+                <dd>Adding interactivity and functionality.</dd>
         </dl>
     </section>
 
@@ -143,14 +143,20 @@
     <section>
         <h2>Learning Resources</h2>
         <figure>
-            <img src="https://via.placeholder.com/600x300" alt="Coding workspace with a laptop and coffee" width="100%">
-            <figcaption>A placeholder image representing coding creativity and focus</figcaption>
-        </figure>
+            <figcaption>Ocean view</figcaption>
+            <img src="ocean_picture.jpg" alt="Beautiful ocean view" width="400">            
+        </figure><br><br>
+
         <p>Listen to an inspirational track while coding:</p>
         <audio controls>
             <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
-        </audio>
+        </audio><br><br>
+
+         <video width="300" height="200" controls>
+            <source src="ocean_weaves.mp4" type="video/mp4">
+            Your browser does not support the video element.
+         </video>
     </section>
 
     <!-- Accessible Form Section -->
@@ -168,7 +174,7 @@
                 <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email">
 
                 <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
+                <input type="date" id="dob" name="dob"required>
 
                 <label for="country">Country:</label>
                 <input type="text" id="country" name="country" value="South Africa" readonly>
@@ -199,12 +205,16 @@
                     <option value="sql">SQL</option>
                 </select>
 
-                <label>Subscription Plan:</label>
+                <label>Subscription Plan:</label><br>
+
                 <input type="radio" id="basic" name="plan" value="basic" required>
                 <label for="basic">Basic</label>
+
                 <input type="radio" id="premium" name="plan" value="premium">
                 <label for="premium">Premium</label>
 
+                <input type="radio" id="vip" name="plan" value="vip">
+                <label for="vip">VIP</label>
                 <label>
                     <input type="checkbox" name="newsletter"> Subscribe to Newsletter
                 </label>
